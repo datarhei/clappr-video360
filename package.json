@@ -19,31 +19,28 @@
         ]
       }
     },
-    "plugins": [
-      "@babel/plugin-external-helpers"
-    ]
+    "plugins": []
   },
   "dependencies": {
-    "kaleidoscopejs": "^1.1.1",
-    "clappr": "0.2.57"
+    "@thiagopnts/kaleidoscope": "git+https://git@github.com/datarhei/kaleidoscope.git#ios",
+    "clappr": "^0.3.12"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.1.5",
     "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
+    "@rollup/plugin-babel": "^5.0.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
     "babel-preset-minify": "^0.5.0",
-    "rollup": "^0.67.0",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-strip": "^1.2.0",
-    "rollup-plugin-uglify": "^6.0.0",
+    "rollup": "^2.7.5",
     "sinon": "^7.1.1",
     "uglify-js": "^3.4.9",
     "webpack": "^3.11.0"
   },
   "scripts": {
-    "build": "BABEL_ENV=production rollup -c && cat dist/clappr-video360.js | uglifyjs -m -c > dist/clappr-video360.min.js",
+    "build": "BABEL_ENV=production rollup -c && babel dist/clappr-video360.js --presets minify > dist/clappr-video360.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
