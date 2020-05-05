@@ -22,7 +22,7 @@
     "plugins": []
   },
   "dependencies": {
-    "@thiagopnts/kaleidoscope": "git+https://git@github.com/datarhei/kaleidoscope.git#ios",
+    "@thiagopnts/kaleidoscope": "git+https://git@github.com/datarhei/kaleidoscope.git#73abba0df71a9d7b1314fa39061d2be98f2a6385",
     "clappr": "^0.3.12"
   },
   "devDependencies": {
